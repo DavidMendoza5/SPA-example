@@ -9,7 +9,7 @@ export const routes = [
         component: InicioComponent
     },
     {
-        path: '/usuarios',
+        path: '/usuarios/:id?',
         component: UsuariosComponent
     }
 ]
