@@ -16,7 +16,8 @@ export const routes = [
         children: [
             {
                 path: ':id',
-                component: InfoUsuario
+                component: InfoUsuario,
+                name: 'InfoUsuario'
             }
         ]
     }
