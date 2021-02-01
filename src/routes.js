@@ -13,12 +13,18 @@ export const routes = [
         path: '/usuarios',
         component: UsuariosComponent,
         // De esta forma se crea una subruta
-        children: [
-            {
-                path: ':id',
-                component: InfoUsuario,
-                name: 'InfoUsuario'
-            }
-        ]
+        // children: [
+        //     {
+        //         path: ':id',
+        //         component: InfoUsuario,
+        //         name: 'InfoUsuario'
+        //     }
+        // ]
+    },
+    {
+        path: '/usuarios/:id',
+        component: InfoUsuario,
+        name: 'InfoUsuario'
     }
+    
 ]
