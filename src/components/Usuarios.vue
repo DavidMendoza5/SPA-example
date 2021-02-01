@@ -3,9 +3,10 @@
         <p>Lista de usuarios</p>
         <ul class="list-group">
             <span>ID: {{ id }}</span>
-            <li class="list-group-item" v-for="usuario in usuarios" :key="usuario.id">
+            <router-link tag="li" :to="{name: 'InfoUsuario', params: {id: usuario.id}}" class="list-group-item" 
+                        v-for="usuario in usuarios" :key="usuario.id">
                 {{ usuario.name }}
-            </li>
+            </router-link>
         </ul>
         <!-- De esta forma mostramos todo lo que viene de la subruta -->
         <router-view></router-view>
