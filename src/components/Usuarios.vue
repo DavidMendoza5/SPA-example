@@ -7,6 +7,8 @@
                 {{ usuario.name }}
             </li>
         </ul>
+        <!-- De esta forma mostramos todo lo que viene de la subruta -->
+        <router-view></router-view>
     </div>
 </template>
 
