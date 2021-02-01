@@ -1,6 +1,7 @@
 // import { component } from "vue/types/umd"
 import InicioComponent from './components/inicioComponent.vue'
 import UsuariosComponent from './components/Usuarios.vue'
+import InfoUsuario from './components/infoUsuario.vue'
 
 // Las rutas son un arreglo de objetos
 export const routes = [
@@ -9,7 +10,14 @@ export const routes = [
         component: InicioComponent
     },
     {
-        path: '/usuarios/:id?',
-        component: UsuariosComponent
+        path: '/usuarios',
+        component: UsuariosComponent,
+        // De esta forma se crea una subruta
+        children: [
+            {
+                path: ':id',
+                component: InfoUsuario
+            }
+        ]
     }
 ]
